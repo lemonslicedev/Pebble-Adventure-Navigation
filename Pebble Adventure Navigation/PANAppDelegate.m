@@ -7,16 +7,88 @@
 //
 
 #import "PANAppDelegate.h"
+#import "PANRootViewController.h"
+#import <PebbleKit/PebbleKit.h>
 
 @implementation PANAppDelegate
+{
+    PBWatch *targetWatch;
+}
+
+- (void)setTargetWatch:(PBWatch *)watch
+{
+    targetWatch = watch;
+    
+    [watch appMessagesGetIsSupported:^(PBWatch *watch, BOOL isAppMessagesSupported) {
+        if (isAppMessagesSupported) {
+            uint8_t bytes[] = { 0x51, 0x54, 0xcd, 0x9d, 0x40, 0x9c, 0x47, 0xc9, 0xb1, 0x15, 0x84, 0x90, 0xe4, 0x44, 0x72, 0x7e };
+            
+            NSData *uuid = [NSData dataWithBytes:bytes length:sizeof(bytes)];
+            
+            [watch appMessagesSetUUID:uuid];
+            [watch appMessagesLaunch:^(PBWatch *watch, NSError *error) {
+                NSLog(@"Launch");
+            }];
+            
+            
+            NSMutableArray *gibs = [[NSMutableArray alloc] init];
+            NSMutableArray *gibKeys = [[NSMutableArray alloc] init];
+            
+            [gibs addObject:@"Gibberish"];
+            NSNumber *iconKey = @(0);
+            [gibKeys addObject:iconKey];
+            
+            NSDictionary *gibberishDict = [[NSDictionary alloc] initWithObjects:gibs forKeys:gibKeys];
+            
+//            NSDictionary *update = @{ iconKey:@"Whatever",
+//                                      temperatureKey:@"Duh" };
+            [targetWatch appMessagesPushUpdate:gibberishDict onSent:^(PBWatch *watch, NSDictionary *update, NSError *error) {
+                NSString *message = error ? [error localizedDescription] : @"Update sent!";
+                [[[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            }];
+            
+            NSString *message = [NSString stringWithFormat:@"Yay! %@ supports AppMessages :D", [watch name]];
+            [[[UIAlertView alloc] initWithTitle:@"Connected!" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        } else {
+            NSString *message = [NSString stringWithFormat:@"Blegh... %@ does NOT support AppMessages :'(", [watch name]];
+            [[[UIAlertView alloc] initWithTitle:@"Connected..." message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        }
+    }];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    PANRootViewController *rv = [[PANRootViewController alloc] init];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rv];
+    
+    [[self window] setRootViewController:nav];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [[PBPebbleCentral defaultCentral] setDelegate:self];
+    [self setTargetWatch:[[PBPebbleCentral defaultCentral] lastConnectedWatch]];
     return YES;
+}
+
+- (void)pebbleCentral:(PBPebbleCentral *)central watchDidConnect:(PBWatch *)watch isNew:(BOOL)isNew
+{
+    [self setTargetWatch:watch];
+    
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Connected" message:[watch name] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
+    [av show];
+}
+
+- (void)pebbleCentral:(PBPebbleCentral *)central watchDidDisconnect:(PBWatch *)watch
+{
+    [[[UIAlertView alloc] initWithTitle:@"Disconnected!" message:[watch name] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    
+    [self setTargetWatch:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

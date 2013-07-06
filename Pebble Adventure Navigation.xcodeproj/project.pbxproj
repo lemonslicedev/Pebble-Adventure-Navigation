@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E98FFC617886FD400E8BDAC /* PANWayPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E98FFC517886FD400E8BDAC /* PANWayPoint.m */; };
 		4EF222231781E1870053B58B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222221781E1870053B58B /* UIKit.framework */; };
 		4EF222251781E1870053B58B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222241781E1870053B58B /* Foundation.framework */; };
 		4EF222271781E1870053B58B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222261781E1870053B58B /* CoreGraphics.framework */; };
@@ -16,9 +17,40 @@
 		4EF222351781E1880053B58B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF222341781E1880053B58B /* Default.png */; };
 		4EF222371781E1880053B58B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF222361781E1880053B58B /* Default@2x.png */; };
 		4EF222391781E1880053B58B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF222381781E1880053B58B /* Default-568h@2x.png */; };
+		4EF222411781E1AA0053B58B /* PANRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF222401781E1AA0053B58B /* PANRootViewController.m */; };
+		4EF222431781E1BE0053B58B /* PANRootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF222421781E1BE0053B58B /* PANRootView.xib */; };
+		4EF222471781E1EA0053B58B /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF222451781E1EA0053B58B /* bg.png */; };
+		4EF222481781E1EA0053B58B /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF222461781E1EA0053B58B /* bg@2x.png */; };
+		4EF2224B1781E3750053B58B /* PANPredictionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2224A1781E3750053B58B /* PANPredictionsViewController.m */; };
+		4EF2224E1781E3870053B58B /* PANRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2224D1781E3870053B58B /* PANRouteViewController.m */; };
+		4EF222501781E3BB0053B58B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF2224F1781E3BB0053B58B /* CoreLocation.framework */; };
+		4EF222521781E3C80053B58B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222511781E3C80053B58B /* MapKit.framework */; };
+		4EF222551781E3E40053B58B /* PANGoogleInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF222541781E3E30053B58B /* PANGoogleInterface.m */; };
+		4EF222581781E3F70053B58B /* PANConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF222571781E3F60053B58B /* PANConnection.m */; };
+		4EF2225D1781E4220053B58B /* PANPredictions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2225C1781E4200053B58B /* PANPredictions.m */; };
+		4EF222601781E4390053B58B /* PANPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2225F1781E4390053B58B /* PANPrediction.m */; };
+		4EF222631781E4510053B58B /* PANDirections.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF222621781E4500053B58B /* PANDirections.m */; };
+		4EF222661781E45D0053B58B /* PANRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF222651781E45D0053B58B /* PANRoutes.m */; };
+		4EF222691781E4690053B58B /* PANLeg.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF222681781E4680053B58B /* PANLeg.m */; };
+		4EF2226C1781E47C0053B58B /* PANStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2226B1781E47A0053B58B /* PANStep.m */; };
+		4EF22273178231090053B58B /* PANRouteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF22272178231080053B58B /* PANRouteView.xib */; };
+		4EF2227617823F0A0053B58B /* PANMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2227517823F070053B58B /* PANMapPoint.m */; };
+		4EF2227817825D2C0053B58B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF2227717825D2B0053B58B /* Default.png */; };
+		4EF2227A17825D3E0053B58B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF2227917825D3C0053B58B /* Default@2x.png */; };
+		4EF2227C17827E6F0053B58B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF2227B17827E6D0053B58B /* icon.png */; };
+		4EF2227E17827EC40053B58B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF2227D17827EC30053B58B /* icon@2x.png */; };
+		4EF222801784C3C50053B58B /* PebbleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF2227F1784C3C50053B58B /* PebbleKit.framework */; };
+		4EF222821784C3E10053B58B /* PebbleVendor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222811784C3E10053B58B /* PebbleVendor.framework */; };
+		4EF222841784C4170053B58B /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222831784C4140053B58B /* ExternalAccessory.framework */; };
+		4EF222861784C4400053B58B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222851784C43F0053B58B /* libz.dylib */; };
+		4EF222881784C4550053B58B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222871784C4540053B58B /* CoreBluetooth.framework */; };
+		4EF2228A1784C46C0053B58B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222891784C46B0053B58B /* CoreMotion.framework */; };
+		4EF2228C1784C4890053B58B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF2228B1784C4880053B58B /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E98FFC417886FD300E8BDAC /* PANWayPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANWayPoint.h; sourceTree = "<group>"; };
+		4E98FFC517886FD400E8BDAC /* PANWayPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANWayPoint.m; sourceTree = "<group>"; };
 		4EF2221F1781E1870053B58B /* Pebble Adventure Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pebble Adventure Navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF222221781E1870053B58B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EF222241781E1870053B58B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,6 +64,48 @@
 		4EF222341781E1880053B58B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4EF222361781E1880053B58B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4EF222381781E1880053B58B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4EF2223F1781E1AA0053B58B /* PANRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANRootViewController.h; sourceTree = "<group>"; };
+		4EF222401781E1AA0053B58B /* PANRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANRootViewController.m; sourceTree = "<group>"; };
+		4EF222421781E1BE0053B58B /* PANRootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PANRootView.xib; sourceTree = "<group>"; };
+		4EF222451781E1EA0053B58B /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		4EF222461781E1EA0053B58B /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
+		4EF222491781E3750053B58B /* PANPredictionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANPredictionsViewController.h; sourceTree = "<group>"; };
+		4EF2224A1781E3750053B58B /* PANPredictionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANPredictionsViewController.m; sourceTree = "<group>"; };
+		4EF2224C1781E3860053B58B /* PANRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANRouteViewController.h; sourceTree = "<group>"; };
+		4EF2224D1781E3870053B58B /* PANRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANRouteViewController.m; sourceTree = "<group>"; };
+		4EF2224F1781E3BB0053B58B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4EF222511781E3C80053B58B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4EF222531781E3E30053B58B /* PANGoogleInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANGoogleInterface.h; sourceTree = "<group>"; };
+		4EF222541781E3E30053B58B /* PANGoogleInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANGoogleInterface.m; sourceTree = "<group>"; };
+		4EF222561781E3F60053B58B /* PANConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANConnection.h; sourceTree = "<group>"; };
+		4EF222571781E3F60053B58B /* PANConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANConnection.m; sourceTree = "<group>"; };
+		4EF2225B1781E41F0053B58B /* PANPredictions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANPredictions.h; sourceTree = "<group>"; };
+		4EF2225C1781E4200053B58B /* PANPredictions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANPredictions.m; sourceTree = "<group>"; };
+		4EF2225E1781E4380053B58B /* PANPrediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANPrediction.h; sourceTree = "<group>"; };
+		4EF2225F1781E4390053B58B /* PANPrediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANPrediction.m; sourceTree = "<group>"; };
+		4EF222611781E4500053B58B /* PANDirections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANDirections.h; sourceTree = "<group>"; };
+		4EF222621781E4500053B58B /* PANDirections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANDirections.m; sourceTree = "<group>"; };
+		4EF222641781E45C0053B58B /* PANRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANRoutes.h; sourceTree = "<group>"; };
+		4EF222651781E45D0053B58B /* PANRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANRoutes.m; sourceTree = "<group>"; };
+		4EF222671781E4680053B58B /* PANLeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANLeg.h; sourceTree = "<group>"; };
+		4EF222681781E4680053B58B /* PANLeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANLeg.m; sourceTree = "<group>"; };
+		4EF2226A1781E47A0053B58B /* PANStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANStep.h; sourceTree = "<group>"; };
+		4EF2226B1781E47A0053B58B /* PANStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANStep.m; sourceTree = "<group>"; };
+		4EF222701781EB460053B58B /* PANJSONSerializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PANJSONSerializable.h; sourceTree = "<group>"; };
+		4EF22272178231080053B58B /* PANRouteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PANRouteView.xib; sourceTree = "<group>"; };
+		4EF2227417823F060053B58B /* PANMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANMapPoint.h; sourceTree = "<group>"; };
+		4EF2227517823F070053B58B /* PANMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANMapPoint.m; sourceTree = "<group>"; };
+		4EF2227717825D2B0053B58B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4EF2227917825D3C0053B58B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4EF2227B17827E6D0053B58B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		4EF2227D17827EC30053B58B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		4EF2227F1784C3C50053B58B /* PebbleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleKit.framework; sourceTree = "<group>"; };
+		4EF222811784C3E10053B58B /* PebbleVendor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PebbleVendor.framework; sourceTree = "<group>"; };
+		4EF222831784C4140053B58B /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		4EF222851784C43F0053B58B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4EF222871784C4540053B58B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		4EF222891784C46B0053B58B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		4EF2228B1784C4880053B58B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,9 +113,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF2228C1784C4890053B58B /* MessageUI.framework in Frameworks */,
+				4EF2228A1784C46C0053B58B /* CoreMotion.framework in Frameworks */,
+				4EF222881784C4550053B58B /* CoreBluetooth.framework in Frameworks */,
+				4EF222861784C4400053B58B /* libz.dylib in Frameworks */,
+				4EF222841784C4170053B58B /* ExternalAccessory.framework in Frameworks */,
+				4EF222521781E3C80053B58B /* MapKit.framework in Frameworks */,
+				4EF222501781E3BB0053B58B /* CoreLocation.framework in Frameworks */,
 				4EF222231781E1870053B58B /* UIKit.framework in Frameworks */,
 				4EF222251781E1870053B58B /* Foundation.framework in Frameworks */,
 				4EF222271781E1870053B58B /* CoreGraphics.framework in Frameworks */,
+				4EF222801784C3C50053B58B /* PebbleKit.framework in Frameworks */,
+				4EF222821784C3E10053B58B /* PebbleVendor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +134,10 @@
 		4EF222161781E1870053B58B = {
 			isa = PBXGroup;
 			children = (
+				4EF2227D17827EC30053B58B /* icon@2x.png */,
+				4EF2227B17827E6D0053B58B /* icon.png */,
+				4EF2227917825D3C0053B58B /* Default@2x.png */,
+				4EF2227717825D2B0053B58B /* Default.png */,
 				4EF222281781E1870053B58B /* Pebble Adventure Navigation */,
 				4EF222211781E1870053B58B /* Frameworks */,
 				4EF222201781E1870053B58B /* Products */,
@@ -68,6 +155,15 @@
 		4EF222211781E1870053B58B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EF2228B1784C4880053B58B /* MessageUI.framework */,
+				4EF222891784C46B0053B58B /* CoreMotion.framework */,
+				4EF222871784C4540053B58B /* CoreBluetooth.framework */,
+				4EF222851784C43F0053B58B /* libz.dylib */,
+				4EF222831784C4140053B58B /* ExternalAccessory.framework */,
+				4EF222811784C3E10053B58B /* PebbleVendor.framework */,
+				4EF2227F1784C3C50053B58B /* PebbleKit.framework */,
+				4EF222511781E3C80053B58B /* MapKit.framework */,
+				4EF2224F1781E3BB0053B58B /* CoreLocation.framework */,
 				4EF222221781E1870053B58B /* UIKit.framework */,
 				4EF222241781E1870053B58B /* Foundation.framework */,
 				4EF222261781E1870053B58B /* CoreGraphics.framework */,
@@ -80,6 +176,11 @@
 			children = (
 				4EF222311781E1880053B58B /* PANAppDelegate.h */,
 				4EF222321781E1880053B58B /* PANAppDelegate.m */,
+				4EF222711781EB4C0053B58B /* Protocols */,
+				4EF2226D1781E4840053B58B /* Models */,
+				4EF2225A1781E4080053B58B /* Stores */,
+				4EF222591781E3FE0053B58B /* Helpers */,
+				4EF222441781E1C70053B58B /* Views */,
 				4EF222291781E1870053B58B /* Supporting Files */,
 			);
 			path = "Pebble Adventure Navigation";
@@ -88,6 +189,8 @@
 		4EF222291781E1870053B58B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4EF222451781E1EA0053B58B /* bg.png */,
+				4EF222461781E1EA0053B58B /* bg@2x.png */,
 				4EF2222A1781E1870053B58B /* Pebble Adventure Navigation-Info.plist */,
 				4EF2222B1781E1870053B58B /* InfoPlist.strings */,
 				4EF2222E1781E1870053B58B /* main.m */,
@@ -97,6 +200,86 @@
 				4EF222381781E1880053B58B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EF222441781E1C70053B58B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EF2223F1781E1AA0053B58B /* PANRootViewController.h */,
+				4EF222401781E1AA0053B58B /* PANRootViewController.m */,
+				4EF222421781E1BE0053B58B /* PANRootView.xib */,
+				4EF222491781E3750053B58B /* PANPredictionsViewController.h */,
+				4EF2224A1781E3750053B58B /* PANPredictionsViewController.m */,
+				4EF2224C1781E3860053B58B /* PANRouteViewController.h */,
+				4EF2224D1781E3870053B58B /* PANRouteViewController.m */,
+				4EF22272178231080053B58B /* PANRouteView.xib */,
+				4EF2227417823F060053B58B /* PANMapPoint.h */,
+				4EF2227517823F070053B58B /* PANMapPoint.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4EF222591781E3FE0053B58B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4EF222561781E3F60053B58B /* PANConnection.h */,
+				4EF222571781E3F60053B58B /* PANConnection.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		4EF2225A1781E4080053B58B /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				4EF222531781E3E30053B58B /* PANGoogleInterface.h */,
+				4EF222541781E3E30053B58B /* PANGoogleInterface.m */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
+		4EF2226D1781E4840053B58B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EF2226E1781E4A90053B58B /* Predictions */,
+				4EF2226F1781E4C20053B58B /* Directions */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4EF2226E1781E4A90053B58B /* Predictions */ = {
+			isa = PBXGroup;
+			children = (
+				4EF2225B1781E41F0053B58B /* PANPredictions.h */,
+				4EF2225C1781E4200053B58B /* PANPredictions.m */,
+				4EF2225E1781E4380053B58B /* PANPrediction.h */,
+				4EF2225F1781E4390053B58B /* PANPrediction.m */,
+			);
+			name = Predictions;
+			sourceTree = "<group>";
+		};
+		4EF2226F1781E4C20053B58B /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+				4EF222611781E4500053B58B /* PANDirections.h */,
+				4EF222621781E4500053B58B /* PANDirections.m */,
+				4E98FFC417886FD300E8BDAC /* PANWayPoint.h */,
+				4E98FFC517886FD400E8BDAC /* PANWayPoint.m */,
+				4EF222641781E45C0053B58B /* PANRoutes.h */,
+				4EF222651781E45D0053B58B /* PANRoutes.m */,
+				4EF222671781E4680053B58B /* PANLeg.h */,
+				4EF222681781E4680053B58B /* PANLeg.m */,
+				4EF2226A1781E47A0053B58B /* PANStep.h */,
+				4EF2226B1781E47A0053B58B /* PANStep.m */,
+			);
+			name = Directions;
+			sourceTree = "<group>";
+		};
+		4EF222711781EB4C0053B58B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4EF222701781EB460053B58B /* PANJSONSerializable.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +338,14 @@
 				4EF222351781E1880053B58B /* Default.png in Resources */,
 				4EF222371781E1880053B58B /* Default@2x.png in Resources */,
 				4EF222391781E1880053B58B /* Default-568h@2x.png in Resources */,
+				4EF222431781E1BE0053B58B /* PANRootView.xib in Resources */,
+				4EF222471781E1EA0053B58B /* bg.png in Resources */,
+				4EF222481781E1EA0053B58B /* bg@2x.png in Resources */,
+				4EF22273178231090053B58B /* PANRouteView.xib in Resources */,
+				4EF2227817825D2C0053B58B /* Default.png in Resources */,
+				4EF2227A17825D3E0053B58B /* Default@2x.png in Resources */,
+				4EF2227C17827E6F0053B58B /* icon.png in Resources */,
+				4EF2227E17827EC40053B58B /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +358,19 @@
 			files = (
 				4EF2222F1781E1870053B58B /* main.m in Sources */,
 				4EF222331781E1880053B58B /* PANAppDelegate.m in Sources */,
+				4EF222411781E1AA0053B58B /* PANRootViewController.m in Sources */,
+				4EF2224B1781E3750053B58B /* PANPredictionsViewController.m in Sources */,
+				4EF2224E1781E3870053B58B /* PANRouteViewController.m in Sources */,
+				4EF222551781E3E40053B58B /* PANGoogleInterface.m in Sources */,
+				4EF222581781E3F70053B58B /* PANConnection.m in Sources */,
+				4EF2225D1781E4220053B58B /* PANPredictions.m in Sources */,
+				4EF222601781E4390053B58B /* PANPrediction.m in Sources */,
+				4EF222631781E4510053B58B /* PANDirections.m in Sources */,
+				4EF222661781E45D0053B58B /* PANRoutes.m in Sources */,
+				4EF222691781E4690053B58B /* PANLeg.m in Sources */,
+				4EF2226C1781E47C0053B58B /* PANStep.m in Sources */,
+				4EF2227617823F0A0053B58B /* PANMapPoint.m in Sources */,
+				4E98FFC617886FD400E8BDAC /* PANWayPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,9 +447,15 @@
 		4EF2223D1781E1880053B58B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pebble Adventure Navigation/Pebble Adventure Navigation-Prefix.pch";
 				INFOPLIST_FILE = "Pebble Adventure Navigation/Pebble Adventure Navigation-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -254,9 +464,14 @@
 		4EF2223E1781E1880053B58B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pebble Adventure Navigation/Pebble Adventure Navigation-Prefix.pch";
 				INFOPLIST_FILE = "Pebble Adventure Navigation/Pebble Adventure Navigation-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -281,6 +496,7 @@
 				4EF2223E1781E1880053B58B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

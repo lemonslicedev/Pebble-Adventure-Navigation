@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PebbleKit/PebbleKit.h>
 
-@interface PANAppDelegate : UIResponder <UIApplicationDelegate>
+@interface PANAppDelegate : UIResponder <UIApplicationDelegate, PBPebbleCentralDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
