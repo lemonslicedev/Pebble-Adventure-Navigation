@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <PebbleKit/PebbleKit.h>
 
-@interface PANPebbleInterface : NSObject
+@interface PANPebbleInterface : NSObject <PBPebbleCentralDelegate>
+
++ (PANPebbleInterface *)sharedStore;
+
+@property (nonatomic, strong) PBWatch *targetWatch;
+
+- (void)startWatchConnection;
+
+- (void)sendWatchMessage:(NSString *)message;
 
 @end

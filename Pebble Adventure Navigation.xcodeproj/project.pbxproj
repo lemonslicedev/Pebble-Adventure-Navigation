@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E98FFC617886FD400E8BDAC /* PANWayPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E98FFC517886FD400E8BDAC /* PANWayPoint.m */; };
+		4E98FFC9178B0FA900E8BDAC /* PANPebbleInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E98FFC8178B0FA900E8BDAC /* PANPebbleInterface.m */; };
 		4EF222231781E1870053B58B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222221781E1870053B58B /* UIKit.framework */; };
 		4EF222251781E1870053B58B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222241781E1870053B58B /* Foundation.framework */; };
 		4EF222271781E1870053B58B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF222261781E1870053B58B /* CoreGraphics.framework */; };
@@ -51,6 +52,8 @@
 /* Begin PBXFileReference section */
 		4E98FFC417886FD300E8BDAC /* PANWayPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANWayPoint.h; sourceTree = "<group>"; };
 		4E98FFC517886FD400E8BDAC /* PANWayPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANWayPoint.m; sourceTree = "<group>"; };
+		4E98FFC7178B0FA900E8BDAC /* PANPebbleInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANPebbleInterface.h; sourceTree = "<group>"; };
+		4E98FFC8178B0FA900E8BDAC /* PANPebbleInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANPebbleInterface.m; sourceTree = "<group>"; };
 		4EF2221F1781E1870053B58B /* Pebble Adventure Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pebble Adventure Navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF222221781E1870053B58B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EF222241781E1870053B58B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -233,6 +236,8 @@
 			children = (
 				4EF222531781E3E30053B58B /* PANGoogleInterface.h */,
 				4EF222541781E3E30053B58B /* PANGoogleInterface.m */,
+				4E98FFC7178B0FA900E8BDAC /* PANPebbleInterface.h */,
+				4E98FFC8178B0FA900E8BDAC /* PANPebbleInterface.m */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				4EF2226C1781E47C0053B58B /* PANStep.m in Sources */,
 				4EF2227617823F0A0053B58B /* PANMapPoint.m in Sources */,
 				4E98FFC617886FD400E8BDAC /* PANWayPoint.m in Sources */,
+				4E98FFC9178B0FA900E8BDAC /* PANPebbleInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 #import "PANGoogleInterface.h"
 #import "PANMapPoint.h"
 #import "PANWayPoint.h"
+#import "PANPebbleInterface.h"
 
 @implementation PANRouteViewController
 
@@ -24,7 +25,6 @@
         locationManager = [[CLLocationManager alloc] init];
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
         [locationManager setDelegate:self];
-        [locationManager startUpdatingLocation];
         [self setRtvcDestination:destination];
         [self setRtvcLocation:location];
         [self fetchDirections];
@@ -155,6 +155,8 @@
 {
     //Some of this needs to be refactored.
     
+    [[PANPebbleInterface sharedStore] startWatchConnection];
+    
     [self setWayPointIndex:0];
     
     NSLog(@"[wayPointIndex]: %d", [self wayPointIndex]);
@@ -167,6 +169,8 @@
     
     [av show];
     
+    [[PANPebbleInterface sharedStore] sendWatchMessage:[startingPoint wayPointDirection]];
+    
     int inc = [self wayPointIndex] + 1;
     
     [self setWayPointIndex:inc];
@@ -176,6 +180,7 @@
     NSString *lblNextWayPoint = [[NSString alloc] initWithFormat:@"%@", [[self wayPoints] objectAtIndex:[self wayPointIndex]]];
     
     [lblMonitoredRegion setText:lblNextWayPoint];
+    [locationManager startUpdatingLocation];
 }
 
 - (void)viewDidLoad
@@ -219,16 +224,19 @@
     
     //TODO: Field test the accuracy of the distance to the waypoint, then display an alert of the instructions of waypoint at index, then change to next way point.
     
-    if (distToWayPoint < 25) {
+    if (distToWayPoint < 35) {
         UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Next" message:[wp wayPointDirection] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         
         [av show];
         
+        [[PANPebbleInterface sharedStore] sendWatchMessage:[wp wayPointDirection]];
+        
         int inc = [self wayPointIndex] + 1;
         
         if (inc > ([[self wayPoints] count] - 1)) {
-            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"End" message:@"End Of Route" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [av show];
+//            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"End" message:@"End Of Route" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [av show];
+            [locationManager setDelegate:nil];
         } else {
             [self setWayPointIndex:inc];
             
